@@ -1,5 +1,5 @@
 # Really Useful GIT commands
-A summary of GIT commands that I personally use because they're really useful
+A collection of GIT commands that I personally use because they're really useful. This is a work in progress, please feel free to Contribute.
 
 ## Check Incoming Changes before you do a `git pull`
 ```
