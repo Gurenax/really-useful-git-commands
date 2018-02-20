@@ -33,3 +33,5 @@ git fetch && git log @{u}..
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
 ```
+
+## ...more to come
