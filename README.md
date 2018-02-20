@@ -4,22 +4,26 @@ A collection of GIT commands that I personally use because they're really useful
 
 ## See a summary of changes between the Branch and the Origin
 ```
-git diff --stat origin/master
 # You can replace master with your branch
+git diff --stat origin/master
 ```
 
 ## See a log of Incoming Changes before you do a `git pull`
 ```
-git fetch && git log ..origin/master
 # You can replace master with your branch
+git fetch && git log ..origin/master
+```
+```
 # or just use the following to dynamically check your current branch
 git fetch && git log ..@{u}
 ```
 
 ## See a log of Outgoing Changes before you do a `git push`
 ```
-git fetch && git log origin/master..
 # You can replace master with your branch
+git fetch && git log origin/master..
+```
+```
 # or just use the following to dynamically check your current branch
 git fetch && git log @{u}..
 ```
