@@ -7,6 +7,10 @@ A collection of GIT commands that I personally use because they're really useful
 # You can replace master with your branch
 git diff --stat origin/master
 ```
+```
+# or just use the following to dynamically check your current branch
+git diff --stat @{u}
+```
 
 ## See a log of Incoming Changes before you do a `git pull`
 ```
