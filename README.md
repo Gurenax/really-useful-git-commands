@@ -12,12 +12,16 @@ git diff --stat origin/master
 ```
 git fetch && git log ..origin/master
 # You can replace master with your branch
+# or just use the following to dynamically check your current branch
+git fetch && git log ..@{u}
 ```
 
 ## See a log of Outgoing Changes before you do a `git push`
 ```
 git fetch && git log origin/master..
 # You can replace master with your branch
+# or just use the following to dynamically check your current branch
+git fetch && git log @{u}..
 ```
 
 ## Undo the last `git commit`
