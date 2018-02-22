@@ -1,6 +1,12 @@
 # Really Useful GIT commands
 A collection of GIT commands that I personally use because they're really useful. This is a work in progress, please feel free to Contribute.
 
+## Basic Push All
+```
+git add .
+git commit -m "Description"
+git push origin master
+```
 
 ## See a summary of changes between the Branch and the Origin
 ```
