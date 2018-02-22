@@ -1,11 +1,37 @@
 # Really Useful GIT commands
 A collection of GIT commands that I personally use because they're really useful. This is a work in progress, please feel free to Contribute.
 
-## Basic Push All
+## Basic Add, Commit, Push
 ```
 git add .
 git commit -m "Description"
 git push origin master
+```
+
+## Basic Pull
+```
+git pull origin master
+```
+
+## Create new branch
+```
+git checkout -b new-branch
+```
+
+## Merge new branch to master
+```
+git checkout master
+git merge new-branch
+```
+
+## See all branches
+```
+git branch -a
+```
+
+## Delete new branch
+```
+git branch -d new-branch
 ```
 
 ## See a summary of changes between the Branch and the Origin
