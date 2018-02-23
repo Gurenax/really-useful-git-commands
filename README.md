@@ -70,4 +70,9 @@ git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
 ```
 
+## Remove git commited files or folders (e.g. sensitive data which were accidentally pushed)
+```
+git filter-branch --tag-name-filter cat --index-filter 'git rm -r --cached --ignore-unmatch <name of file or folder>' --prune-empty -f -- --all
+```
+
 ## ...more to come
