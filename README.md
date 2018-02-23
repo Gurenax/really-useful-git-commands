@@ -75,4 +75,21 @@ git rebase -i head~2
 git filter-branch --tag-name-filter cat --index-filter 'git rm -r --cached --ignore-unmatch <name of file or folder>' --prune-empty -f -- --all
 ```
 
+## Tell git to remember your git login
+```
+# Mac Only
+git credential-osxkeychain
+git config --global credential.helper osxkeychain
+```
+```
+# Windows Only
+git config --global credential.helper wincred
+```
+```
+# Linux Only
+git config --global credential.helper cache
+# Set the cache to timeout after 1 hour (setting is in seconds)
+git config --global credential.helper 'cache --timeout=3600'
+```
+
 ## ...more to come
