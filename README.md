@@ -65,7 +65,7 @@ git fetch && git log @{u}..
 ```
 
 ### Undo the last `git commit`
-`Warning: Once deleted, you will lose all files and changes pertaining to that commit and you cannot revert back and to a time.'
+Warning: Once deleted, you will lose all files and changes pertaining to that commit and you cannot revert back and to a time.
 ```
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
