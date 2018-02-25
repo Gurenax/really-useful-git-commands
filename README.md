@@ -1,40 +1,55 @@
 # Really Useful GIT commands
 A collection of GIT commands that I personally use because they're really useful. This is a work in progress, please feel free to Contribute.
 
-### Basic Add, Commit, Push
+## Contents
+* **[Basic Add, Commit, Push](#BasicAddCommitPush)**
+* **[Basic Pull](#BasicPull)**
+* **[Create new branch](#CreateNewBranch)**
+* **[Merge new branch to master](#MergeNewBranchToMaster)**
+* **[See all branches](#SeeAllBranches)**
+* **[Delete new branch](#DeleteNewBranch)**
+* **[See a summary of changes between the Branch and the Origin](#SeeASummaryOfChangesBetweenTheBranchAndTheOrigin)**
+* **[See a log of Incoming Changes before you do a git pull](#SeeALogOfIncomingChangesBeforeYouDoAGitPull)**
+* **[See a log of Outgoing Changes before you do a git push](#SeeALogOfOutgoingChangesBeforeYouDoAGitPush)**
+* **[Undo the last git commit](#UndoTheLastGitCommit)**
+* **[Remove git commited files or folders](#RemoveGitCommitedFilesOrFolders)**
+* **[Tell git to remember your git login](#TellGitToRememberYourGitLogin)**
+
+
+### <a id="BasicAddCommitPush"></a>Basic Add, Commit, Push
 ```
 git add .
 git commit -m "Description"
 git push origin master
 ```
 
-### Basic Pull
+### <a id="BasicPull"></a>Basic Pull
 ```
 git pull origin master
 ```
 
-### Create new branch
+### <a id="CreateNewBranch"></a>Create new branch
 ```
 git checkout -b new-branch
 ```
 
-### Merge new branch to master
+### <a id="MergeNewBranchToMaster"></a>Merge new branch to master
 ```
 git checkout master
 git merge new-branch
 ```
 
-### See all branches
+### <a id="SeeAllBranches"></a>See all branches
 ```
 git branch -a
 ```
 
-### Delete new branch
+### <a id="DeleteNewBranch"></a>Delete new branch
 ```
 git branch -d new-branch
 ```
 
-### See a summary of changes between the Branch and the Origin
+### <a id="SeeASummaryOfChangesBetweenTheBranchAndTheOrigin"></a>See a summary of changes between the Branch and the Origin
 ```
 # You can replace master with your branch
 git diff --stat origin/master
@@ -44,7 +59,7 @@ git diff --stat origin/master
 git diff --stat @{u}
 ```
 
-### See a log of Incoming Changes before you do a `git pull`
+### <a id="SeeALogOfIncomingChangesBeforeYouDoAGitPull"></a>See a log of Incoming Changes before you do a `git pull`
 ```
 # You can replace master with your branch
 git fetch && git log ..origin/master
@@ -54,7 +69,7 @@ git fetch && git log ..origin/master
 git fetch && git log ..@{u}
 ```
 
-### See a log of Outgoing Changes before you do a `git push`
+### <a id="SeeALogOfOutgoingChangesBeforeYouDoAGitPush"></a>See a log of Outgoing Changes before you do a `git push`
 ```
 # You can replace master with your branch
 git fetch && git log origin/master..
@@ -64,19 +79,19 @@ git fetch && git log origin/master..
 git fetch && git log @{u}..
 ```
 
-### Undo the last `git commit`
+### <a id="UndoTheLastGitCommit"></a>Undo the last `git commit`
 Warning: Once deleted, you will lose all files and changes pertaining to that commit and you cannot revert back and to a time.
 ```
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
 ```
 
-### Remove git commited files or folders (e.g. sensitive data which were accidentally pushed)
+### <a id="RemoveGitCommitedFilesOrFolders"></a>Remove git commited files or folders (e.g. sensitive data which were accidentally pushed)
 ```
 git filter-branch --tag-name-filter cat --index-filter 'git rm -r --cached --ignore-unmatch <name of file or folder>' --prune-empty -f -- --all
 ```
 
-### Tell git to remember your git login
+### <a id="TellGitToRememberYourGitLogin"></a>Tell git to remember your git login
 ```
 # Mac Only
 git credential-osxkeychain
@@ -93,4 +108,4 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 ```
 
-### ...more to come
+## ...more to come
