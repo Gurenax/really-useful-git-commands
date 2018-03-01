@@ -112,6 +112,8 @@ git config --global credential.helper 'cache --timeout=3600'
 ```
 # Variation 1
 git log --date-order --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"
+```
+```
 # Variation 1 with --all
 git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"
 ```
@@ -119,6 +121,8 @@ git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Cr
 ```
 # Variation 2
 git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+```
+```
 # Variation 2 with --all
 git log --all --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
 ```
