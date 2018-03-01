@@ -42,7 +42,7 @@ git merge new-branch
 ```
 
 ### <a id="RebaseMasterOntoNewBranch"></a>Rebase master onto new branch
-Warning: Never rebase a public/shared branch.
+*Warning: Never rebase a public/shared branch.*
 ```
 git checkout new-branch
 git rebase master
@@ -94,7 +94,7 @@ git fetch && git log @{u}..
 ```
 
 ### <a id="UndoTheLastGitCommit"></a>Undo the last `git commit`
-Warning: Create a new branch before rebasing to undo the last commit. Never rebase a public/shared branch.
+*Warning: Create a new branch before rebasing to undo the last commit. Never rebase a public/shared branch.*
 ```
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
