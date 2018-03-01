@@ -6,6 +6,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Basic Pull](#BasicPull)**
 * **[Create new branch](#CreateNewBranch)**
 * **[Merge new branch to master](#MergeNewBranchToMaster)**
+* **[Rebase master onto new branch](#RebaseMasterOntoNewBranch)**
 * **[See all branches](#SeeAllBranches)**
 * **[Delete new branch](#DeleteNewBranch)**
 * **[See a summary of changes between the Branch and the Origin](#SeeASummaryOfChangesBetweenTheBranchAndTheOrigin)**
@@ -37,6 +38,12 @@ git checkout -b new-branch
 ```
 git checkout master
 git merge new-branch
+```
+
+### <a id="RebaseMasterOntoNewBranch"></a>Rebase master onto new branch
+```
+git checkout new-branch
+git rebase master
 ```
 
 ### <a id="SeeAllBranches"></a>See all branches
