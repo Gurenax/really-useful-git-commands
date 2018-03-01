@@ -42,6 +42,7 @@ git merge new-branch
 ```
 
 ### <a id="RebaseMasterOntoNewBranch"></a>Rebase master onto new branch
+Warning: Never rebase a public/shared branch.
 ```
 git checkout new-branch
 git rebase master
@@ -93,7 +94,7 @@ git fetch && git log @{u}..
 ```
 
 ### <a id="UndoTheLastGitCommit"></a>Undo the last `git commit`
-Warning: Create a new branch before rebasing. Once the undo is done, you will lose all files and changes pertaining to that commit you had to undo. You cannot undo an undo not unless you have a backup branch.
+Warning: Create a new branch before rebasing to undo the last commit. Never rebase a public/shared branch.
 ```
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
