@@ -7,6 +7,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Create new branch](#CreateNewBranch)**
 * **[Merge new branch to master](#MergeNewBranchToMaster)**
 * **[Rebase master onto new branch](#RebaseMasterOntoNewBranch)**
+* **[Merge vs Rebase](#MergeVsRebase)**
 * **[See all branches](#SeeAllBranches)**
 * **[Delete new branch](#DeleteNewBranch)**
 * **[See a summary of changes between the Branch and the Origin](#SeeASummaryOfChangesBetweenTheBranchAndTheOrigin)**
@@ -45,6 +46,11 @@ git merge new-branch
 git checkout new-branch
 git rebase master
 ```
+
+### <a id="MergeVsRebase"></a>Merge vs Rebase
+- `Merge` just means you are combining two branches together.
+- `Rebase` on the otherhand means you are moving the base of the branch to a different position. (e.g. When you checkout to a new branch, you basically copy all the commits from the source branch. That is the base of the new branch. Now, Rebasing means you will no longer use that base because you are repositioning that to the latest commit of the source branch a.k.a. Rebase).
+- Anyways, here is [The best explanation](https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333)
 
 ### <a id="SeeAllBranches"></a>See all branches
 ```
