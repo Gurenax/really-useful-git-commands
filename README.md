@@ -93,7 +93,7 @@ git fetch && git log @{u}..
 ```
 
 ### <a id="UndoTheLastGitCommit"></a>Undo the last `git commit`
-Warning: Once deleted, you will lose all files and changes pertaining to that commit and you cannot revert back and to a time.
+Warning: Create a new branch before rebasing. Once the undo is done, you will lose all files and changes pertaining to that commit you had to undo. You cannot undo an undo not unless you have a backup branch.
 ```
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
