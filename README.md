@@ -14,7 +14,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Undo the last git commit](#UndoTheLastGitCommit)**
 * **[Remove git commited files or folders](#RemoveGitCommitedFilesOrFolders)**
 * **[Tell git to remember your git login](#TellGitToRememberYourGitLogin)**
-
+* **[Pretty Git Log](#PrettyGitLog)**
 
 ### <a id="BasicAddCommitPush"></a>Basic Add, Commit, Push
 ```
@@ -106,6 +106,17 @@ git config --global credential.helper wincred
 git config --global credential.helper cache
 # Set the cache to timeout after 1 hour (setting is in seconds)
 git config --global credential.helper 'cache --timeout=3600'
+```
+
+### <a id="PrettyGitLog"></a>Pretty Git Log
+```
+# Variation 1
+git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"
+```
+
+```
+# Variation 2
+git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
 ```
 
 ## ...more to come
