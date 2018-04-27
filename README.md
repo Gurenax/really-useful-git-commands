@@ -64,7 +64,7 @@ git branch -a
 git branch -d new-branch
 ```
 
-### <a id="RevertACommit"></a>RevertACommit
+### <a id="RevertACommit"></a>Revert a Commit
 ```
 git revert <commit hash>
 ```
