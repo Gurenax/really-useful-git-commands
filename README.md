@@ -18,6 +18,9 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Remove git commited files or folders](#RemoveGitCommitedFilesOrFolders)**
 * **[Tell git to remember your git login](#TellGitToRememberYourGitLogin)**
 * **[Pretty Git Log](#PrettyGitLog)**
+* **[Stash Changes] (#StashChanges)**
+* **[Re-apply Stashed Changes and delete from Stash List] (#PopStashChanges)**
+* **[Re-apply Stashed Changes but do not delete from Stash List] (#ApplyStashChanges)**
 
 ### <a id="BasicAddCommitPush"></a>Basic Add, Commit, Push
 ```
@@ -145,6 +148,22 @@ git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 ```
 # Variation 2 with --all
 git log --all --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+```
+
+### <a id="StashChanges"></a>Stash Changes
+```
+git stash
+```
+
+### <a id="PopStashChanges"></a>Re-apply Stashed Changes and delete from Stash List
+```
+git stash pop
+```
+
+### <a id="ApplyStashChanges"></a>Re-apply Stashed Changes but do not delete from Stash List
+- Useful when applying the stash to multiple branches
+```
+git stash apply
 ```
 
 ## ...more to come
