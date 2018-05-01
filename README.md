@@ -10,6 +10,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Merge vs Rebase](#MergeVsRebase)**
 * **[See all branches](#SeeAllBranches)**
 * **[Delete new branch](#DeleteNewBranch)**
+* **[Show list of files changed in a Commit](#ShowListOfFilesChangedInACommit)**
 * **[Show contents of a Commit](#ShowContentsOfACommit)**
 * **[Revert a Commit](#RevertACommit)**
 * **[See a summary of changes between the Branch and the Origin](#SeeASummaryOfChangesBetweenTheBranchAndTheOrigin)**
@@ -67,6 +68,11 @@ git branch -a
 ### <a id="DeleteNewBranch"></a>Delete new branch
 ```
 git branch -d new-branch
+```
+
+### <a id="ShowListOfFilesChangedInACommit"></a>Show list of files changed in a Commit
+```
+git diff-tree --no-commit-id --name-only -r <commit hash>
 ```
 
 ### <a id="ShowContentsOfACommit"></a>Show contents of a Commit
