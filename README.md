@@ -166,4 +166,9 @@ git stash pop
 git stash apply
 ```
 
+### View Stashed CHanges
+```
+git stash list
+```
+
 ## ...more to come
