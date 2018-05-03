@@ -24,6 +24,8 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Re-apply Stashed Changes and delete from Stash List](#PopStashChanges)**
 * **[Re-apply Stashed Changes but do not delete from Stash List](#ApplyStashChanges)**
 * **[View Stashed Changes](#ViewStashedChanges)**
+* **[Stash Changes and Pull Updates](#StashAndPull)**
+* **[Stash Changes and Merge a Branch](#StashAndMerge)**
 
 ### <a id="BasicAddCommitPush"></a>Basic Add, Commit, Push
 ```
@@ -182,6 +184,20 @@ git stash apply
 ### <a id="ViewStashedChanges"></a>View Stashed Changes
 ```
 git stash list
+```
+
+### <a id="StashAndPull"></a>Stash Changes and Pull Updates
+```
+git stash
+git pull
+git stash pop
+```
+
+### <a id="StashAndMerge"></a>Stash Changes and Merge a Branch
+```
+git stash
+git merge <branch name>
+git stash pop
 ```
 
 ## ...more to come
