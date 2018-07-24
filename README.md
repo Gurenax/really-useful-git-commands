@@ -26,6 +26,9 @@ A collection of GIT commands that I personally use because they're really useful
 * **[View Stashed Changes](#ViewStashedChanges)**
 * **[Stash Changes and Pull Updates](#StashAndPull)**
 * **[Stash Changes and Merge a Branch](#StashAndMerge)**
+* **[Push to all remote branches](#PushToAllRemoteBranches)**
+* **[Push a specific branch to all remotes](#PushSpecificBranchToAllRemoteBranches)**
+* **[Create an alias for pushing to all remote branches](#CreateAliasToPushToAllRemoteBranches)**
 
 ### <a id="BasicAddCommitPush"></a>Basic Add, Commit, Push
 ```
@@ -198,6 +201,22 @@ git stash pop
 git stash
 git merge <branch name>
 git stash pop
+```
+
+### <a id="PushToAllRemoteBranches"></a>Push to all remote branches
+```
+git remote | xargs -L1 git push --all
+```
+
+### <a id="PushSpecificBranchToAllRemoteBranches"></a>Push a specific branch to all remotes
+```
+git remote | xargs -L1 -I R git push R master
+```
+
+### <a id="CreateAliasToPushToAllRemoteBranches"></a>Create an alias for pushing to all remote branches
+```
+git config --global alias.pushall '!git remote | xargs -L1 git push --all'
+git pushall
 ```
 
 ## ...more to come
