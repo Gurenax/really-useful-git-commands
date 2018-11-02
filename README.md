@@ -132,7 +132,7 @@ git rebase -i head~2
 
 ### Undo the last `git commit` without rebasing
 ```
-git reset --soft head~2
+git reset --soft head~1
 ```
 
 ### Remove git commited files or folders
