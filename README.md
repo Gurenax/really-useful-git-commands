@@ -17,6 +17,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[See a log of Incoming Changes before you do a git pull](#see-a-log-of-incoming-changes-before-you-do-a-git-pull)**
 * **[See a log of Outgoing Changes before you do a git push](#see-a-log-of-outgoing-changes-before-you-do-a-git-push)**
 * **[Undo the last git commit](#undo-the-last-git-commit)**
+* **[Undo the last git commit without rebasing](#undo-the-last-git-commit-without-rebasing)**
 * **[Remove git commited files or folders](#remove-git-commited-files-or-folders)**
 * **[Tell git to remember your git login](#tell-git-to-remember-your-git-login)**
 * **[Pretty Git Log](#pretty-git-log)**
