@@ -3,18 +3,18 @@ A collection of GIT commands that I personally use because they're really useful
 
 ## Contents
 * **[Basic Add, Commit, Push](#basic-add-commit-push)**
-* **[Basic Pull](#BasicPull)**
-* **[Create new branch](#CreateNewBranch)**
-* **[Merge new branch to master](#MergeNewBranchToMaster)**
-* **[Rebase master onto new branch](#RebaseMasterOntoNewBranch)**
-* **[Merge vs Rebase](#MergeVsRebase)**
-* **[See all branches](#SeeAllBranches)**
-* **[Delete new branch](#DeleteNewBranch)**
-* **[Show list of files changed in a Commit](#ShowListOfFilesChangedInACommit)**
-* **[Show contents of a Commit](#ShowContentsOfACommit)**
-* **[Revert a Commit](#RevertACommit)**
-* **[See a summary of changes between the Branch and the Origin](#SeeASummaryOfChangesBetweenTheBranchAndTheOrigin)**
-* **[See a log of Incoming Changes before you do a git pull](#SeeALogOfIncomingChangesBeforeYouDoAGitPull)**
+* **[Basic Pull](#basic-pull)**
+* **[Create new branch](#create-new-branch)**
+* **[Merge new branch to master](#merge-new-branch-to-master)**
+* **[Rebase master onto new branch](#rebase-master-on-to-new-branch)**
+* **[Merge vs Rebase](#merge-vs-rebase)**
+* **[See all branches](#see-all-branches)**
+* **[Delete new branch](#delete-new-branch)**
+* **[Show list of files changed in a Commit](#show-list-of-files-changed-in-a-commit)**
+* **[Show contents of a Commit](#show-contents-of-a-commit)**
+* **[Revert a Commit](#revert-a-commit)**
+* **[See a summary of changes between the Branch and the Origin](#see-a-summary-of-changes-between-the-branch-and-the-origin)**
+* **[See a log of Incoming Changes before you do a git pull](#see-a-log-of-incoming-changes-before-you-do-a-git-pull)**
 * **[See a log of Outgoing Changes before you do a git push](#SeeALogOfOutgoingChangesBeforeYouDoAGitPush)**
 * **[Undo the last git commit](#UndoTheLastGitCommit)**
 * **[Remove git commited files or folders](#RemoveGitCommitedFilesOrFolders)**
