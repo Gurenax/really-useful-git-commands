@@ -6,7 +6,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Basic Pull](#basic-pull)**
 * **[Create new branch](#create-new-branch)**
 * **[Merge new branch to master](#merge-new-branch-to-master)**
-* **[Rebase master onto new branch](#rebase-master-on-to-new-branch)**
+* **[Rebase master onto new branch](#rebase-master-onto-new-branch)**
 * **[Merge vs Rebase](#merge-vs-rebase)**
 * **[See all branches](#see-all-branches)**
 * **[Delete new branch](#delete-new-branch)**
@@ -15,20 +15,20 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Revert a Commit](#revert-a-commit)**
 * **[See a summary of changes between the Branch and the Origin](#see-a-summary-of-changes-between-the-branch-and-the-origin)**
 * **[See a log of Incoming Changes before you do a git pull](#see-a-log-of-incoming-changes-before-you-do-a-git-pull)**
-* **[See a log of Outgoing Changes before you do a git push](#SeeALogOfOutgoingChangesBeforeYouDoAGitPush)**
-* **[Undo the last git commit](#UndoTheLastGitCommit)**
-* **[Remove git commited files or folders](#RemoveGitCommitedFilesOrFolders)**
-* **[Tell git to remember your git login](#TellGitToRememberYourGitLogin)**
-* **[Pretty Git Log](#PrettyGitLog)**
+* **[See a log of Outgoing Changes before you do a git push](#see-a-log-of-outgoing-changes-before-you-do-a-git-push)**
+* **[Undo the last git commit](#undo-the-last-git-commit)**
+* **[Remove git commited files or folders](#remove-git-commited-files-or-folders)**
+* **[Tell git to remember your git login](#tell-git-to-remember-your-git-login)**
+* **[Pretty Git Log](#pretty-git-log)**
 * **[Stash Changes](#StashChanges)**
-* **[Re-apply Stashed Changes and delete from Stash List](#PopStashChanges)**
-* **[Re-apply Stashed Changes but do not delete from Stash List](#ApplyStashChanges)**
-* **[View Stashed Changes](#ViewStashedChanges)**
-* **[Stash Changes and Pull Updates](#StashAndPull)**
-* **[Stash Changes and Merge a Branch](#StashAndMerge)**
-* **[Push to all remote branches](#PushToAllRemoteBranches)**
-* **[Push a specific branch to all remotes](#PushSpecificBranchToAllRemoteBranches)**
-* **[Create an alias for pushing to all remote branches](#CreateAliasToPushToAllRemoteBranches)**
+* **[Re-apply Stashed Changes and delete from Stash List](#re-apply-stashed-changes-and-delete-from-stash-list)**
+* **[Re-apply Stashed Changes but do not delete from Stash List](#re-apply-stashed-changes-but-do-not-delete-from-stash-list)**
+* **[View Stashed Changes](#view-stashed-changes)**
+* **[Stash Changes and Pull Updates](#stash-changes-and-pull-updates)**
+* **[Stash Changes and Merge a Branch](#stash-changes-and-merge-a-branch)**
+* **[Push to all remote branches](#push-to-all-remote-branches)**
+* **[Push a specific branch to all remotes](#push-a-specific-branch-to-all-remotes)**
+* **[Create an alias for pushing to all remote branches](#create-an-alias-for-pushing-to-all-remote-branches)**
 
 ### Basic Add, Commit, Push
 ```
@@ -54,8 +54,9 @@ git merge new-branch
 ```
 
 ### <a id="RebaseMasterOntoNewBranch"></a>Rebase master onto new branch
-*Warning: Never rebase a public/shared branch.*
 ```
+Warning: Never rebase a public/shared branch.
+
 git checkout new-branch
 git rebase master
 ```
@@ -127,8 +128,10 @@ git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
 ```
 
-### <a id="RemoveGitCommitedFilesOrFolders"></a>Remove git commited files or folders (e.g. sensitive data which were accidentally pushed)
+### <a id="RemoveGitCommitedFilesOrFolders"></a>Remove git commited files or folders
 ```
+(e.g. sensitive data which were accidentally pushed)
+
 git filter-branch --tag-name-filter cat --index-filter 'git rm -r --cached --ignore-unmatch <name of file or folder>' --prune-empty -f -- --all
 ```
 
