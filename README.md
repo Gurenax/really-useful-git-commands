@@ -2,7 +2,7 @@
 A collection of GIT commands that I personally use because they're really useful. This is a work in progress, please feel free to Contribute.
 
 ## Contents
-* **[Basic Add, Commit, Push](#BasicAddCommitPush)**
+* **[Basic Add, Commit, Push](#basic-add-commit-push)**
 * **[Basic Pull](#BasicPull)**
 * **[Create new branch](#CreateNewBranch)**
 * **[Merge new branch to master](#MergeNewBranchToMaster)**
@@ -30,7 +30,6 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Push a specific branch to all remotes](#PushSpecificBranchToAllRemoteBranches)**
 * **[Create an alias for pushing to all remote branches](#CreateAliasToPushToAllRemoteBranches)**
 
-<a id="BasicAddCommitPush"></a>
 ### Basic Add, Commit, Push
 ```
 git add .
