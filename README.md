@@ -30,7 +30,8 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Push a specific branch to all remotes](#PushSpecificBranchToAllRemoteBranches)**
 * **[Create an alias for pushing to all remote branches](#CreateAliasToPushToAllRemoteBranches)**
 
-### <a id="BasicAddCommitPush"></a>Basic Add, Commit, Push
+<a id="BasicAddCommitPush"></a>
+### Basic Add, Commit, Push
 ```
 git add .
 git commit -m "Description"
