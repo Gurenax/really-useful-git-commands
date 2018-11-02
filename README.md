@@ -37,23 +37,23 @@ git commit -m "Description"
 git push origin master
 ```
 
-### <a id="BasicPull"></a>Basic Pull
+### Basic Pull
 ```
 git pull origin master
 ```
 
-### <a id="CreateNewBranch"></a>Create new branch
+### Create new branch
 ```
 git checkout -b new-branch
 ```
 
-### <a id="MergeNewBranchToMaster"></a>Merge new branch to master
+### Merge new branch to master
 ```
 git checkout master
 git merge new-branch
 ```
 
-### <a id="RebaseMasterOntoNewBranch"></a>Rebase master onto new branch
+### Rebase master onto new branch
 ```
 Warning: Never rebase a public/shared branch.
 
@@ -61,37 +61,37 @@ git checkout new-branch
 git rebase master
 ```
 
-### <a id="MergeVsRebase"></a>Merge vs Rebase
+### Merge vs Rebase
 - `Merge` just means you are combining two branches together.
 - `Rebase` on the otherhand means you are moving the base of the branch to a different position. (e.g. When you checkout to a new branch, you basically copy all the commits from the source branch. That separation is called the base of the new branch. Now, Rebasing means you will no longer use that separation because you will move the base to the latest commit of the source branch a.k.a. Rebase).
 - Anyways, here is [The best explanation](https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333)
 
-### <a id="SeeAllBranches"></a>See all branches
+### See all branches
 ```
 git branch -a
 ```
 
-### <a id="DeleteNewBranch"></a>Delete new branch
+### Delete new branch
 ```
 git branch -d new-branch
 ```
 
-### <a id="ShowListOfFilesChangedInACommit"></a>Show list of files changed in a Commit
+### Show list of files changed in a Commit
 ```
 git diff-tree --no-commit-id --name-only -r <commit hash>
 ```
 
-### <a id="ShowContentsOfACommit"></a>Show contents of a Commit
+### Show contents of a Commit
 ```
 git show <commit hash>
 ```
 
-### <a id="RevertACommit"></a>Revert a Commit
+### Revert a Commit
 ```
 git revert <commit hash>
 ```
 
-### <a id="SeeASummaryOfChangesBetweenTheBranchAndTheOrigin"></a>See a summary of changes between the Branch and the Origin
+### See a summary of changes between the Branch and the Origin
 ```
 # You can replace master with your branch
 git diff --stat origin/master
@@ -101,7 +101,7 @@ git diff --stat origin/master
 git diff --stat @{u}
 ```
 
-### <a id="SeeALogOfIncomingChangesBeforeYouDoAGitPull"></a>See a log of Incoming Changes before you do a `git pull`
+### See a log of Incoming Changes before you do a `git pull`
 ```
 # You can replace master with your branch
 git fetch && git log ..origin/master
@@ -111,7 +111,7 @@ git fetch && git log ..origin/master
 git fetch && git log ..@{u}
 ```
 
-### <a id="SeeALogOfOutgoingChangesBeforeYouDoAGitPush"></a>See a log of Outgoing Changes before you do a `git push`
+### See a log of Outgoing Changes before you do a `git push`
 ```
 # You can replace master with your branch
 git fetch && git log origin/master..
@@ -121,21 +121,27 @@ git fetch && git log origin/master..
 git fetch && git log @{u}..
 ```
 
-### <a id="UndoTheLastGitCommit"></a>Undo the last `git commit`
-*Warning: Create a new branch before rebasing to undo the last commit. Never rebase a public/shared branch.*
+### Undo the last `git commit`
 ```
+Warning: Create a new branch before rebasing to undo the last commit. Never rebase a public/shared branch.
+
 git rebase -i head~2
 # Then delete the 2nd line (e.g. pick XXXXXXX desription)
 ```
 
-### <a id="RemoveGitCommitedFilesOrFolders"></a>Remove git commited files or folders
+### Undo the last `git commit` without rebasing
+```
+git reset --soft head~2
+```
+
+### Remove git commited files or folders
 ```
 (e.g. sensitive data which were accidentally pushed)
 
 git filter-branch --tag-name-filter cat --index-filter 'git rm -r --cached --ignore-unmatch <name of file or folder>' --prune-empty -f -- --all
 ```
 
-### <a id="TellGitToRememberYourGitLogin"></a>Tell git to remember your git login
+### Tell git to remember your git login
 ```
 # Mac Only
 git credential-osxkeychain
@@ -152,7 +158,7 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 ```
 
-### <a id="PrettyGitLog"></a>Pretty Git Log
+### Pretty Git Log
 ```
 # Variation 1
 git log --date-order --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"
@@ -171,52 +177,52 @@ git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 git log --all --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
 ```
 
-### <a id="StashChanges"></a>Stash Changes
+### Stash Changes
 ```
 git stash
 ```
 
-### <a id="PopStashChanges"></a>Re-apply Stashed Changes and delete from Stash List
+### Re-apply Stashed Changes and delete from Stash List
 ```
 git stash pop
 ```
 
-### <a id="ApplyStashChanges"></a>Re-apply Stashed Changes but do not delete from Stash List
+### Re-apply Stashed Changes but do not delete from Stash List
 - Useful when applying the stash to multiple branches
 ```
 git stash apply
 ```
 
-### <a id="ViewStashedChanges"></a>View Stashed Changes
+### View Stashed Changes
 ```
 git stash list
 ```
 
-### <a id="StashAndPull"></a>Stash Changes and Pull Updates
+### Stash Changes and Pull Updates
 ```
 git stash
 git pull
 git stash pop
 ```
 
-### <a id="StashAndMerge"></a>Stash Changes and Merge a Branch
+### Stash Changes and Merge a Branch
 ```
 git stash
 git merge <branch name>
 git stash pop
 ```
 
-### <a id="PushToAllRemoteBranches"></a>Push to all remote branches
+### Push to all remote branches
 ```
 git remote | xargs -L1 git push --all
 ```
 
-### <a id="PushSpecificBranchToAllRemoteBranches"></a>Push a specific branch to all remotes
+### Push a specific branch to all remotes
 ```
 git remote | xargs -L1 -I R git push R master
 ```
 
-### <a id="CreateAliasToPushToAllRemoteBranches"></a>Create an alias for pushing to all remote branches
+### Create an alias for pushing to all remote branches
 ```
 git config --global alias.pushall '!git remote | xargs -L1 git push --all'
 git pushall
