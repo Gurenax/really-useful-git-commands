@@ -13,6 +13,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Show list of files changed in a Commit](#show-list-of-files-changed-in-a-commit)**
 * **[Show contents of a Commit](#show-contents-of-a-commit)**
 * **[Revert a Commit](#revert-a-commit)**
+* **[Revert a Commit from History](#revert-a-commit-from-history)**
 * **[See a summary of changes between the Branch and the Origin](#see-a-summary-of-changes-between-the-branch-and-the-origin)**
 * **[See a log of Incoming Changes before you do a git pull](#see-a-log-of-incoming-changes-before-you-do-a-git-pull)**
 * **[See a log of Outgoing Changes before you do a git push](#see-a-log-of-outgoing-changes-before-you-do-a-git-push)**
@@ -90,6 +91,11 @@ git show <commit hash>
 ### Revert a Commit
 ```
 git revert <commit hash>
+```
+
+### Revert a Commit from History
+```
+git revert --strategy resolve <commit hash>
 ```
 
 ### See a summary of changes between the Branch and the Origin
