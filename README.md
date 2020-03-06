@@ -31,6 +31,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Push to all remote branches](#push-to-all-remote-branches)**
 * **[Push a specific branch to all remotes](#push-a-specific-branch-to-all-remotes)**
 * **[Create an alias for pushing to all remote branches](#create-an-alias-for-pushing-to-all-remote-branches)**
+* **[Bundle a GIT repo to a zip file](#bundle-a-git-repo-to-a-zip-file)**
 
 ### Basic Add, Commit, Push
 ```
@@ -233,6 +234,11 @@ git remote | xargs -L1 -I R git push R master
 ```
 git config --global alias.pushall '!git remote | xargs -L1 git push --all'
 git pushall
+```
+
+### Bundle a GIT repo to a zip file
+```
+git bundle create <Destination Folder> --all
 ```
 
 ## ...more to come
