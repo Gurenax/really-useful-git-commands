@@ -32,6 +32,7 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Push a specific branch to all remotes](#push-a-specific-branch-to-all-remotes)**
 * **[Create an alias for pushing to all remote branches](#create-an-alias-for-pushing-to-all-remote-branches)**
 * **[Bundle a git repo to a zip file](#bundle-a-git-repo-to-a-zip-file)**
+* **[Overwrite a branch entirely with another branch](#overwrite-a-branch-entirely-with-another-branch)**
 
 ### Basic Add, Commit, Push
 ```
@@ -239,6 +240,15 @@ git pushall
 ### Bundle a GIT repo to a zip file
 ```
 git bundle create <Destination Folder> --all
+```
+
+### Overwrite a branch entirely with another branch
+For example, we want to overwrite `master` entirely with `dummy`
+```
+git checkout dummy
+git merge -s ours master
+git checkout master
+git merge dummy
 ```
 
 ## ...more to come
