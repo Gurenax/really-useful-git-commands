@@ -33,6 +33,8 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Create an alias for pushing to all remote branches](#create-an-alias-for-pushing-to-all-remote-branches)**
 * **[Bundle a git repo to a zip file](#bundle-a-git-repo-to-a-zip-file)**
 * **[Overwrite a branch entirely with another branch](#overwrite-a-branch-entirely-with-another-branch)**
+* **[Exclude a file from the git repo without using .gitignore](#exclude-a-file-from-the-git-repo-without-using-gitignore)**
+* **[Exclude a file from the git repo which is already tracked](#exclude-a-file-from-the-git-repo-which-is-already-tracked)**
 
 ### Basic Add, Commit, Push
 ```
@@ -250,5 +252,18 @@ git merge -s ours master
 git checkout master
 git merge dummy
 ```
+
+### Exclude a file from the git repo without using .gitignore
+Edit the exclude file and add the folders/files you wish to ignore similar to .gitignore
+```
+vi .git/info/exclude
+```
+
+### Exclude a file from the git repo which is already tracked
+```
+git update-index —assume-unchanged path/to/file.txt
+git update-index —assume-unchanged path/to/folder/
+```
+
 
 ## ...more to come
