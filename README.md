@@ -15,25 +15,29 @@ A collection of GIT commands that I personally use because they're really useful
 * **[Revert a Commit](#revert-a-commit)**
 * **[Revert a Commit from History](#revert-a-commit-from-history)**
 * **[See a summary of changes between the Branch and the Origin](#see-a-summary-of-changes-between-the-branch-and-the-origin)**
-* **[See a log of Incoming Changes before you do a git pull](#see-a-log-of-incoming-changes-before-you-do-a-git-pull)**
-* **[See a log of Outgoing Changes before you do a git push](#see-a-log-of-outgoing-changes-before-you-do-a-git-push)**
-* **[Undo the last git commit](#undo-the-last-git-commit)**
-* **[Undo the last git commit without rebasing](#undo-the-last-git-commit-without-rebasing)**
+* **[You can replace master with your branch](#you-can-replace-master-with-your-branch)**
+* **[or just use the following to dynamically check your current branch](#or-just-use-the-following-to-dynamically-check-your-current-branch)**
+* **[See a log of Incoming Changes before you do a `git pull`](#see-a-log-of-incoming-changes-before-you-do-a-git-pull)**
+* **[See a log of Outgoing Changes before you do a `git push`](#see-a-log-of-outgoing-changes-before-you-do-a-git-push)**
+* **[Undo the last `git commit`](#undo-the-last-git-commit)**
+* **[Undo the last `git commit` without rebasing](#undo-the-last-git-commit-without-rebasing)**
 * **[Remove git commited files or folders](#remove-git-commited-files-or-folders)**
 * **[Tell git to remember your git login](#tell-git-to-remember-your-git-login)**
+* **[Set the cache to timeout after 1 hour (setting is in seconds)](#set-the-cache-to-timeout-after-1-hour-(setting-is-in-seconds))**
 * **[Pretty Git Log](#pretty-git-log)**
-* **[Stash Changes](#StashChanges)**
+* **[Stash Changes](#stash-changes)**
 * **[Re-apply Stashed Changes and delete from Stash List](#re-apply-stashed-changes-and-delete-from-stash-list)**
 * **[Re-apply Stashed Changes but do not delete from Stash List](#re-apply-stashed-changes-but-do-not-delete-from-stash-list)**
 * **[View Stashed Changes](#view-stashed-changes)**
 * **[Stash Changes and Pull Updates](#stash-changes-and-pull-updates)**
 * **[Stash Changes and Merge a Branch](#stash-changes-and-merge-a-branch)**
+* **[Push to current branch without specifying the name](#push-to-current-branch-without-specifying-the-name)**
 * **[Push to all remote branches](#push-to-all-remote-branches)**
 * **[Push a specific branch to all remotes](#push-a-specific-branch-to-all-remotes)**
 * **[Create an alias for pushing to all remote branches](#create-an-alias-for-pushing-to-all-remote-branches)**
-* **[Bundle a git repo to a zip file](#bundle-a-git-repo-to-a-zip-file)**
+* **[Bundle a GIT repo to a zip file](#bundle-a-git-repo-to-a-zip-file)**
 * **[Overwrite a branch entirely with another branch](#overwrite-a-branch-entirely-with-another-branch)**
-* **[Exclude a file from the git repo without using .gitignore](#exclude-a-file-from-the-git-repo-without-using-gitignore)**
+* **[Exclude a file from the git repo without using .gitignore](#exclude-a-file-from-the-git-repo-without-using-.gitignore)**
 * **[Exclude a file from the git repo which is already tracked](#exclude-a-file-from-the-git-repo-which-is-already-tracked)**
 
 ### Basic Add, Commit, Push
@@ -221,6 +225,12 @@ git stash pop
 git stash
 git merge <branch name>
 git stash pop
+```
+
+### Push to current branch without specifying the name
+Instead of using `git push origin really-long-name-for-a-branch`, use:
+```
+git push origin HEAD
 ```
 
 ### Push to all remote branches
